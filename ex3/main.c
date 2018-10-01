@@ -3,12 +3,14 @@
 #include <stdlib.h>
 
 int main(int argc, char const *argv[]) {
+  /* Inicializando variáveis */
   Lista casamento;
   cria_lista(&casamento);
   int escolha,event;
   char nome[50],eventos[3];
+  /* Começando o loop do menu de opções */
   do{
-    printf("*******MENU**********\n\n");
+    printf("\n\n*******MENU**********\n\n");
     printf("Insira uma das opções abaixo:\n\n(1) Inserir Convidado\n(2) Mostrar Convidados\n");
     printf("(3) Mostrar Convidados de um dos Eventos\n(4) Sair\n\nOpção:\t");
     scanf(" %d",&escolha);
@@ -43,6 +45,7 @@ int main(int argc, char const *argv[]) {
     }
   }while(escolha != 4);
 
+  /* Desaloca toda a memória usada na lista */
   apaga_lista(&casamento);
   return 0;
 }

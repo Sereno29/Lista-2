@@ -30,6 +30,7 @@ int insere_lista(Lista *l, char *nome, char *convites){
   return 0;
 }
 
+/* Desalocando todo a memória da lista */
 void apaga_lista(Lista *l){
   No *aux;
   while(l->inicio != NULL){
@@ -42,6 +43,7 @@ void apaga_lista(Lista *l){
   return;
 }
 
+/* Exibe os convidados para um certo evento */
 void exibe_evento(Lista *l, int evento){
   No *aux;
   if(evento == 0)
@@ -60,6 +62,7 @@ void exibe_evento(Lista *l, int evento){
   return;
 }
 
+/* Mostra a lista de convidados de todos os eventos */
 void mostrar_lista(Lista *l){
   No *aux;
   printf("\n**********LISTA DE CONVIDADOS**********\n");

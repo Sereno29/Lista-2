@@ -7,6 +7,9 @@
     struct no *proximo;
   }No;
 
+/* A lista tem dois ponteiros, pois um deles é para o inicio e o outro é para
+   indicar onde a iteração de retirada de elementos deve começar no próximo
+  passo. */
   typedef struct{
     No *inicio,*inicio_iteracao;
   }Lista;

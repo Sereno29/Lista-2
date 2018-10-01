@@ -11,7 +11,7 @@ void cria_fila(Fila *f){
 
 /* Inserção Fila: retira sempre ao final da fila */
 int insere_fila(Fila *f,Cliente *c){
-  // Alocando espeço para as novas variáveis
+  // Alocando espaço para as novas variáveis
   Cliente *aux;
   No *novo;
   novo = (No *) malloc(sizeof(No));
@@ -47,11 +47,11 @@ int retira_fila(Fila *f, Cliente *c){
   // Checa se a fila está vazia
   if(f->inicio == NULL)
     return 1;
-  // Transfere dados para a variável c e desaloca o espaço do nó
+  // Transfere dados para a variável c
   strcpy(c->nome,f->inicio->consumidor->nome);
   c->itens = f->inicio->consumidor->itens;
   c->status = f->inicio->consumidor->status;
-  // Redefinição de ponteiros e desalocação de memória
+  // Redefinição de ponteiros e desalocação de memória da string do nó, do cliente do nó e do nó em si
   aux = f->inicio;
   f->inicio = f->inicio->proximo;
   free(aux->consumidor->nome);
